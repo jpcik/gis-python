@@ -1,0 +1,7 @@
+name: "GIS Python"
+channels:
+  - defaults
+dependencies:
+  - jupyter
+  - jupyterlab
+prefix: "/opt/conda"
