@@ -1,4 +1,4 @@
-name: "GIS Python"
+name: "GISPython"
 channels:
   - defaults
 dependencies:
