@@ -9,7 +9,8 @@
         "stroke-opacity": 1,
         "fill": "#555555",
         "fill-opacity": 0.5,
-        "type": "terrain"
+        "type": "terrain",
+        "name": "T-A"
       },
       "geometry": {
         "type": "Polygon",
@@ -51,7 +52,8 @@
         "stroke-opacity": 1,
         "fill": "#555555",
         "fill-opacity": 0.5,
-        "type": "terrain"
+        "type": "terrain",
+        "name": "T-B"
       },
       "geometry": {
         "type": "Polygon",
@@ -93,7 +95,8 @@
         "stroke-opacity": 1,
         "fill": "#555555",
         "fill-opacity": 0.5,
-        "type": "terrain"
+        "type": "terrain",
+        "name": "T-C"
       },
       "geometry": {
         "type": "Polygon",
@@ -131,7 +134,8 @@
         "stroke-opacity": 1,
         "fill": "#ff8080",
         "fill-opacity": 0.5,
-        "type": "house"
+        "type": "house",
+        "name": "H3"
       },
       "geometry": {
         "type": "Polygon",
@@ -169,7 +173,8 @@
         "stroke-opacity": 1,
         "fill": "#ff8080",
         "fill-opacity": 0.5,
-        "type": "house"
+        "type": "house",
+        "name": "H1"
       },
       "geometry": {
         "type": "Polygon",
@@ -207,7 +212,8 @@
         "stroke-opacity": 1,
         "fill": "#ff8080",
         "fill-opacity": 0.5,
-        "type": "house"
+        "type": "house",
+        "name": "H2"
       },
       "geometry": {
         "type": "Polygon",
