@@ -10,7 +10,7 @@
         "fill": "#555555",
         "fill-opacity": 0.5,
         "type": "terrain",
-        "name": "T-A"
+        "name": "Terrain-A"
       },
       "geometry": {
         "type": "Polygon",
@@ -53,7 +53,7 @@
         "fill": "#555555",
         "fill-opacity": 0.5,
         "type": "terrain",
-        "name": "T-B"
+        "name": "Terrain-B"
       },
       "geometry": {
         "type": "Polygon",
@@ -96,7 +96,7 @@
         "fill": "#555555",
         "fill-opacity": 0.5,
         "type": "terrain",
-        "name": "T-C"
+        "name": "Terrain-C"
       },
       "geometry": {
         "type": "Polygon",
@@ -135,7 +135,7 @@
         "fill": "#ff8080",
         "fill-opacity": 0.5,
         "type": "house",
-        "name": "H3"
+        "name": "House-3"
       },
       "geometry": {
         "type": "Polygon",
@@ -174,7 +174,7 @@
         "fill": "#ff8080",
         "fill-opacity": 0.5,
         "type": "house",
-        "name": "H1"
+        "name": "House-1"
       },
       "geometry": {
         "type": "Polygon",
@@ -213,7 +213,7 @@
         "fill": "#ff8080",
         "fill-opacity": 0.5,
         "type": "house",
-        "name": "H2"
+        "name": "House-2"
       },
       "geometry": {
         "type": "Polygon",
@@ -319,7 +319,7 @@
         "stroke": "#555555",
         "stroke-width": 2,
         "stroke-opacity": 1,
-        "type": "route"
+        "type": "road"
       },
       "geometry": {
         "type": "LineString",
