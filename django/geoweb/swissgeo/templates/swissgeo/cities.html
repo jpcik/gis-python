@@ -1,9 +1,10 @@
-<ul>
-  {% for city in top_cities %}
-  <li>
-      <a href="/swissgeo/cities/{{city.id}}">
-      {{city.city_name}}
-      </a>
-  </li>
-  {% endfor %}
-</ul>
+<ul>        
+    {% for city in top_cities %}            
+       <li>                
+         <a href="/swissgeo/city/{{city.id}}">
+            {{city.city_name}}
+        </a>            
+      </li>        
+    {% endfor %}   
+  </ul>
+ 

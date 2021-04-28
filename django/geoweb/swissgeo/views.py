@@ -1,27 +1,48 @@
 from django.shortcuts import render
-from django.http import HttpResponse
-from .models import City
 from django.template import loader
+from .models import City,Canton
 from django.http import Http404
-
+from django.core.serializers import serialize
 
 # Create your views here.
+from django.http import HttpResponse
+
 def index(request):    
    return HttpResponse("Hi there this is Switzerland")
 
-def cities(request):
-    top_cities=City.objects.order_by('-city_name')[:5]
-    #template = loader.get_template('swissgeo/cities.html')
-    context={'top_cities':top_cities}
-    #output = ','.join([c.city_name for c in top_cities])
-    #return HttpResponse(template.render(context,request))
-    return render(request,'swissgeo/cities.html',context)
 
+def cities(request): 
+    top_cities=City.objects.order_by('-city_name')[:3] 
+    template= loader.get_template('swissgeo/cities.html')    
+    context = { 'top_cities':top_cities, } 
+    return HttpResponse(template.render(context,request))
+    #output = ', '.join([c.city_name for c in top_cities])    
+    #return HttpResponse(output)
 
-def city(request,city_id):
-    try:
-        city=City.objects.get(pk=city_id)
-    except City.DoesNotExist:
-        raise Http404("city not found!!")
-    
+def city(request,city_id):    
+    try:         
+        city=City.objects.get(pk=city_id)    
+    except City.DoesNotExist:        
+        raise Http404("City not found!!") 
     return render(request,'swissgeo/city.html',{'city':city})
+
+def canton(request,canton_name):        
+    cantons=Canton.objects.filter(name=canton_name)       
+    #return HttpResponse(cantons[1].geom.wkt)
+    return render(request,'swissgeo/canton.html',
+                {'cantonobj':cantons})
+
+
+
+def cantonsjson(request):    
+   cantons=Canton.objects.all()    
+   ser=serialize('geojson',cantons,
+                 geometry_field='geom',
+                 fields=('name',))          
+   return HttpResponse(ser)
+
+def cantons(request):      
+   context ={    }        
+   return render(request,
+     'swissgeo/cantons.html',context)
+

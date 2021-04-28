@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-)6)c6ac-8khp2_8$0*1qd8$7#a#iqz2d^o5p_7!-ys-pust=gj'
+SECRET_KEY = 'django-insecure-ouhkwt+@(iwq3jwiuq*&dye0v@mq$ou$z-4f)9z=$g$sf-7sp)'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -31,13 +31,15 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'swissgeo.apps.SwissgeoConfig',
+    'swissgeo.apps.SwissgeoConfig', 
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.gis',
+    'leaflet',
 ]
 
 MIDDLEWARE = [
@@ -76,7 +78,8 @@ WSGI_APPLICATION = 'geoweb.wsgi.application'
 
 DATABASES = {
     'default': {
-      'ENGINE': 'django.db.backends.postgresql', 
+      'ENGINE':'django.contrib.gis.db.backends.postgis',
+#      'ENGINE': 'django.db.backends.postgresql', 
       'NAME': 'postgres',       
       'USER': 'postgres',        
       'PASSWORD': 'admin',        
@@ -128,3 +131,14 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+LEAFLET_CONFIG ={    
+   'MIN_ZOOM':3,    
+   'MAX_ZOOM':15,    
+   'DEFAULT_ZOOM':7,    
+   'DEFAULT_CENTER': (46.7,8),
+}
+
+
+GDAL_LIBRARY_PATH = '/usr/lib/libgdal.so.20.5.0'
