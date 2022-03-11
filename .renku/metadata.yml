@@ -1,25 +1,2 @@
-'@id': https://renkulab.io/projects/jean-paul.calbimonte/gis-python
-'@type':
-- http://schema.org/Project
-- http://www.w3.org/ns/prov#Location
-http://schema.org/agent: 1.1.1
-http://schema.org/creator:
-  '@id': mailto:jean-paul.calbimonte@hevs.ch
-  '@type':
-  - http://schema.org/Person
-  - http://www.w3.org/ns/prov#Person
-  http://schema.org/affiliation: null
-  http://schema.org/alternateName: null
-  http://schema.org/email: jean-paul.calbimonte@hevs.ch
-  http://schema.org/name: "Jean-Paul Calbimonte P\xE9rez"
-  http://www.w3.org/2000/01/rdf-schema#label: "Jean-Paul Calbimonte P\xE9rez"
-http://schema.org/dateCreated: '2019-03-05T10:33:49+00:00'
-http://schema.org/name: GIS Python
-http://schema.org/schemaVersion: '8'
-https://swissdatasciencecenter.github.io/renku-ontology#automatedTemplateUpdate: false
-https://swissdatasciencecenter.github.io/renku-ontology#immutableTemplateFiles: []
-https://swissdatasciencecenter.github.io/renku-ontology#templateId: null
-https://swissdatasciencecenter.github.io/renku-ontology#templateMetadata: null
-https://swissdatasciencecenter.github.io/renku-ontology#templateReference: null
-https://swissdatasciencecenter.github.io/renku-ontology#templateSource: null
-https://swissdatasciencecenter.github.io/renku-ontology#templateVersion: null
+# Dummy file kept for backwards compatibility, does not contain actual version
+'http://schema.org/schemaVersion': '9'
