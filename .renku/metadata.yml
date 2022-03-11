@@ -2,7 +2,7 @@
 '@type':
 - http://schema.org/Project
 - http://www.w3.org/ns/prov#Location
-http://schema.org/agent: 0.14.1
+http://schema.org/agent: 1.1.1
 http://schema.org/creator:
   '@id': mailto:jean-paul.calbimonte@hevs.ch
   '@type':
@@ -13,7 +13,7 @@ http://schema.org/creator:
   http://schema.org/email: jean-paul.calbimonte@hevs.ch
   http://schema.org/name: "Jean-Paul Calbimonte P\xE9rez"
   http://www.w3.org/2000/01/rdf-schema#label: "Jean-Paul Calbimonte P\xE9rez"
-http://schema.org/dateCreated: '2019-03-05T10:33:49.639000+00:00'
+http://schema.org/dateCreated: '2019-03-05T10:33:49+00:00'
 http://schema.org/name: GIS Python
 http://schema.org/schemaVersion: '8'
 https://swissdatasciencecenter.github.io/renku-ontology#automatedTemplateUpdate: false
