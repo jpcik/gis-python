@@ -3,19 +3,19 @@ SELECT * FROM cantons;
 
 -- Get only name and id 
 -- Area in Km2 of Valaisform cantons tabel
-SELECT name, gid FROM cantons;
+SELECT name, id FROM cantons;
 
 -- Count all cantons
 SELECT COUNT(*) FROM cantons;
 
 -- Information about canton of Valais
-SELECT name, gid, kantonsnum FROM cantons WHERE name='Valais';
+SELECT name, id, kantonsnum FROM cantons WHERE name='Valais';
 
 -- Information about canton of Vaud
-SELECT name, gid, kantonsnum FROM cantons WHERE name='Vaud';
+SELECT name, id, kantonsnum FROM cantons WHERE name='Vaud';
 
 -- Information about canton of Fribourg
-SELECT name, gid, kantonsnum,kt_teil FROM cantons WHERE name='Fribourg';
+SELECT name, id, kantonsnum,kt_teil FROM cantons WHERE name='Fribourg';
 
 -- Area in Km2 of Valais
 SELECT name, ST_area(geom)/1000000 AS areakm2 FROM cantons WHERE name='Valais';
