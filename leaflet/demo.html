@@ -90,20 +90,21 @@
 		themap.on('click', displayLocation);
 		*/
 
-
+/*
 		// recuperate GeoJSON from an online dataset
 		var cantondata = null
 		var dataurl = "https://gist.githubusercontent.com/jpcik/df19846e4958f39d6a6eed26d38af036/raw/0e006147240fc411c78f6685d4fc1d85b921ec33/cantons.json";
 		$.getJSON(dataurl, function(data) {
 			cantondata = L.geoJson(data, {
-				onEachFeature: onEachFeature
+			//	onEachFeature: onEachFeature
 			});
 			cantondata.addTo(themap);
 		});
-
+*/
 
 		//highlight a go feature 	
 			
+		/*
 		function highlightFeature(e) {
 			var layer = e.target;
 
@@ -121,7 +122,7 @@
 		function resetHighlight(e) {
 			cantondata.resetStyle(e.target);
 		}
-
+*/
     // assign event handlers for mouseover, mouseout, click
 		function onEachFeature(feature, layer) {
 			layer.on({
@@ -131,10 +132,11 @@
 			});
 		}
 
+		/*
 		function zoomToFeature(e) {
 			themap.fitBounds(e.target.getBounds());
 		}
-
+*/
 	</script>
 </body>
 
