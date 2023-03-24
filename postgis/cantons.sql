@@ -35,6 +35,9 @@ SELECT name,einwohnerz, kantonsfla FROM cantons WHERE kt_teil in ('1','0') order
 -- Population density of all cantons, ordered
 SELECT name,einwohnerz/kantonsfla as density FROM cantons WHERE kt_teil in ('1','0') order by density desc;
 
+-- smaller border length
+select name, sum(ST_Perimeter(geom)) border from cantons group by name order by border;
+
 -- Cantons that have a limit with Valais
 SELECT c2.name, c2.kt_teil 
 FROM cantons c1, cantons c2 
