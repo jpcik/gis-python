@@ -1,6 +1,6 @@
 name: "GISPython"
 channels:
-  - defaults
+  - conda-forge
 dependencies:
   - jupyter
   - jupyterlab
