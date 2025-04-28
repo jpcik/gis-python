@@ -3,13 +3,12 @@
 {% leaflet_js %}    
 {% leaflet_css %} 
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script> 
-
 </head>
 
 <body>    
     {% leaflet_map "cantons" callback="main_map_init" %}        
     <script type="text/javascript">       
-function main_map_init (map, options) {            
+     function main_map_init (map, options) {            
      var dataurl = '{% url "cantonsjson" %}'            
      $.getJSON(dataurl, function (data){               
           L.geoJson(data,{onEachFeature: onEachFeature}).addTo(map); });        
@@ -21,7 +20,7 @@ function onEachFeature(feature, layer) {
        layer.bindPopup(feature.properties.name);            
     }                    
 }
-            
+      
  </script>    
  </body>
  

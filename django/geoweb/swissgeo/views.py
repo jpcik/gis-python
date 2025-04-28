@@ -1,22 +1,22 @@
 from django.shortcuts import render
-from django.http import HttpResponse
-from .models import City, Canton
-from django.template import loader
-from django.http import Http404
-from django.core.serializers import serialize
-
 
 # Create your views here.
+from django.http import HttpResponse
+
 def index(request):    
    return HttpResponse("Hi there this is Switzerland")
 
+from .models import City, Canton
 
-def cities(request): 
-    top_cities=City.objects.order_by('-city_name')[:4] 
-    #output = ', '.join([c.city_name for c in top_cities])    
-    #return HttpResponse(output)
-    context = { 'top_cities':top_cities, }    
-    return render(request,'swissgeo/index.html',context)
+from django.template import loader
+
+def cities(request):    
+   top_cities=City.objects.order_by('-city_name')[:3]      
+   template= loader.get_template('swissgeo/cities.html')    
+   context = { 'top_cities':top_cities, } 
+   return HttpResponse(template.render(context,request))
+
+from django.http import Http404
 
 
 def city(request,city_id):    
@@ -26,12 +26,13 @@ def city(request,city_id):
       raise Http404("City not found!!") 
    return render(request,'swissgeo/city.html',{'city':city})
 
-
-def canton(request,canton_name):        
-    cantons=Canton.objects.filter(name=canton_name)       
-    return render(request,'swissgeo/canton.html',
+def canton(request,canton_name):            
+  cantons=Canton.objects.filter(name=canton_name)    
+  return render(request,'swissgeo/canton.html',
                 {'cantonobj':cantons[0]})
 
+
+from django.core.serializers import serialize
 
 def cantonsjson(request):    
    cantons=Canton.objects.all()    
