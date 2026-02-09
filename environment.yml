@@ -1,8 +1,0 @@
-name: "GISPython"
-channels:
-  - conda-forge
-dependencies:
-  - jupyter
-  - jupyterlab
-  - shapely
-prefix: "/opt/conda"
