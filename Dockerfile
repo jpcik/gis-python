@@ -3,6 +3,8 @@
 
 FROM renku/renkulab-py:3.10-0.24.0 as builder
 
+
+
 # RENKU_VERSION determines the version of the renku CLI
 # that will be used in this image. To find the latest version,
 # visit https://pypi.org/project/renku/#history.
@@ -28,6 +30,11 @@ RUN if [ -n "$RENKU_VERSION" ] ; then \
 
 
 FROM renku/renkulab-py:3.10-0.24.0
+
+
+RUN pip install RISE
+
+RUN pip install jupyterlab_rise
 
 # Uncomment and adapt if code is to be included in the image
 # COPY src /code/src

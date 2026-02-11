@@ -1,4 +1,11 @@
 {
     "name": "python dev",
-    "image": "jpcik/gis-python:latest"
+    //"image": "jpcik/gis-python:latest"
+    "build": {
+        "dockerfile": "../Dockerfile",
+        "context": "../.",
+        "args": {
+            "PYTHON_ENV":"my_python_dev"
+        }
+    }
 }
